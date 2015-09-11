@@ -1,0 +1,136 @@
+.angular-google-map-container { 
+	height: 500px; 
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #35DEA1;
+}
+
+.crumbs {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-bottom: 30px;
+
+}
+
+.feedbox {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 150px;
+	padding-bottom: 30px;
+	outline: 1px solid black;
+	margin-bottom: 20px;
+
+}
+
+#footer {
+	position: absolute;
+	bottom: 0px;
+}
+
+/*styling for registration*/
+#reg {
+	background-image: url('/assets/images/landing.jpg');
+	color: #35DEA1;
+	margin-top: 100px;
+	
+}
+.col-sm-4{
+	color: black;
+}
+	#reg h1{
+		color: white;
+		
+	}
+
+	#reg h3{
+		
+	}
+
+	#reg h5{
+		color:white;
+	}
+
+	#reg button {
+		vertical-align: top;
+		display: inline;
+		width: 165px;
+		color: white;
+		background-color: #35DEA1;
+		opacity: 0.9;
+		border: 1px white solid;
+	}
+
+	#reg #button1{
+		vertical-align: top;
+		display: inline;
+		width: 165px;
+		color: white;
+		opacity: 0.9;
+		border: 1px white solid;
+		background-color: transparent;
+	}
+
+	#reg .form-control{
+		opacity: 0.7;
+		color: black;
+	}
+
+/*styling for registration*/
+
+.validation{
+	text-align: center;
+	margin-top: 50px;
+}
+	
+a:link {
+    text-decoration: none;
+}
+
+/*.feedbox{
+	vertical-align: top;
+	display: inline-block;
+	outline: 1px solid black;
+	height: 170px;
+	width: 1000px;
+	margin-bottom: 20px;
+}*/
+/*	.span1{
+		display: inline-block;
+		vertical-align: top;
+	}
+	.span2{
+		display: inline-block;
+		vertical-align: top;
+	}
+	.span3{
+		display: inline-block;
+		vertical-align: top;
+	}*/
+
+/*styles for reservation page*/
+#reserv_btn {
+	margin-top: 20px;
+
+}
+
+#desc {
+	height: 200px;
+	overflow: scroll;
+}	
+
+/*styles for reservation page*/
+
+#strains_table {
+	margin-top: 100px;
+}
+

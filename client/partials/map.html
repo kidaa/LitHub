@@ -1,0 +1,21 @@
+<div ng-controller="MapsController">
+	<div class='row'>
+		<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+			<ui-gmap-markers 
+				models="markers" 
+				idkey="markers.id" 
+				coords="'coords'" 
+				icon="'icon'" 
+				click="click(this)">
+			</ui-gmap-markers>
+			<!-- <ui-gmap-windows 
+				models="windows" 
+				coords="'coords'"
+				show="'show'"
+				templateUrl="'templateUrl'"
+				templateParameter="'templateParameter'"
+				closeClick="closeClick()">
+			</ui-gmap-windows>  -->
+		</ui-gmap-google-map>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<div ng-controller="StrainsController">
+	<div class="container">
+		<table id="strains_table" class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Strain Name</th>
+					<th>User Rating</th>
+					<th>Type</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="strain in strains | orderBy : name | filter:search">
+					<td>{{strain.name}}</td>
+					<td><img ng-src="{{strain.star_image}}"></td>
+					<td>{{strain.category}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ul class="pager">
+	    	<li class="previous"><a ng-click="prevPage()" href="#">&larr; Previous</a></li>
+	    	<li class="next"><a ng-click="nextPage()" href="#">Next &rarr;</a></li>
+		</ul>
+	</div>
+</div>
+

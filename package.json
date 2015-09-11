@@ -1,0 +1,10 @@
+{
+  "name": "lithubb",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "~4.2.0",
+    "express-session": "^1.11.3",
+    "mongoose": "latest"
+  }
+}

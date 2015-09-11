@@ -1,0 +1,38 @@
+<div ng-controller="ReservationsController">
+	<div class='container'>
+		<h3>Vendor Dashboard</h3>
+		<table class="table table-striped table-bordered table-condensed table-responsive">
+			<tr>
+				<th>Name</th>
+				<th>Vendor</th>
+				<th>Strain</th>
+				<th>Grams purchased</th>
+				<th>Eigths purchased</th>
+				<th>Quarters purchased</th>
+				<th>Halves purchased</th>
+				<th>Ounces purchased</th>
+				<th>Quantity (grams)</th>
+				<th>Total ($)</th>
+				<th>Status</th>
+				<th>Action</th>
+			</tr>
+			<tr ng-repeat="reservation in allreservations">
+				<td >{{reservation.first_name}} {{reservation.last_name}}</td>
+				<td ng-bind="reservation.vendor"></td>
+				<td ng-bind="reservation.name"></td>
+				<td ng-bind="reservation.quantity_gram"></td>
+				<td ng-bind="reservation.quantity_eigth"></td>
+				<td ng-bind="reservation.quantity_quarter"></td>
+				<td ng-bind="reservation.quantity_half"></td>
+				<td ng-bind="reservation.quantity_oz"></td>
+				<td ng-bind="reservation.price_gram"></td>
+				<td>total</td>
+					<td ng-if="reservation.status == 0 ">Order not ready</td>
+					<td ng-if="reservation.status == 1 ">Ready for pickup</td>
+				<td>
+					<button type="button" class="btn btn-success" ng-click="available(reservation.id)">Make Available</button>
+					<button type="button" class="btn btn-danger" ng-click="unavailable(reservation.id)">Not Yet Ready</button>
+				</td>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div ng-controller="ReservationsController">
+	<div class="container">
+		<div class='row crumbs'><a href="#/">Dispensaries</a> > <a href="#/vendor/{{ vendorID }}"><span ng-bind="name"></span></a> > <span ng-bind="strainName"></span></div>
+		<div class='row'>
+			<div class='col-md-9'>
+				<img src="{{ imgSRC }}" class="img-rounded img-responsive" alt="weed_image">
+			</div>
+			<div class='col-md-3'>
+				<div class='row col-md-12'>
+					<h4><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Price / gram: {{ price_gram }}</h4>
+				</div>
+				<div class='row col-md-12'>
+					<h4><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Type: {{ category}}</h4>
+				</div>
+				<form class="row col-md-12">
+					<h4><span class="glyphicon glyphicon-scale" area-hidden="true"></span> Quantity: </h4>
+					<div class="col-md-4 col-md-offset-1">
+					 	<input class="form-control" id="ex1" type="text" ng-model="newResv.amount">
+					</div>
+					<div class="col-md-7">
+					 	<select class="form-control" id="ex1" type="text" ng-model="newResv.unit">
+					 		<option>grams</option>
+					 		<option>1/8 oz</option>
+					 		<option>1/4 oz</option>
+					 		<option>1/2 oz</option>
+					 		<option>1 oz</option>
+					 	</select>
+					</div>
+					<input type='hidden' ng-model="strainID">
+				</form>
+				<div class='row col-md-12'>
+					<h4><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> Total: 25</h4>
+				</div>
+				<div id="desc" class='row col-md-12'>
+					{{ desc }}
+				</div>
+				<div class='col-md-12'><button id="reserv_btn" type="button" class="btn btn-success btn-lg btn-block" ng-click="addOrder(newResv, vendorID, strainID)">Reserve</button></div>	
+			</div>
+		</div>
+	</div>
+</div>

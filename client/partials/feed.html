@@ -1,0 +1,32 @@
+<title>Home</title>
+<div ng-controller="ReservationsController">
+	<div class='container'>
+		<h3>Feed</h3>
+		<div class ='row feedbox' ng-repeat="reservation in feed_reservations | filter:search">
+			<h4>Your {{reservation.vendor}} reservation is ready...</h4>
+			<div class="col-sm-4 ">
+				<p ng-if="reservation.vendor == 'Green Theory'"><img src="assets/icons/green_theory.png"></p>
+				<p ng-if="reservation.vendor == 'BelMar Bellevue Marijuana Store'"><img src="assets/icons/michael.jpg" class="img-circle"></p>
+				<p ng-if="reservation.vendor == 'Uncle Ikes'"><img src="assets/icons/ike.jpg"></p>
+			</div>
+			<div class="col-sm-4">
+				<p><b>Strain:</b> {{reservation.name}}</p>
+				<p ng-if="reservation.status == 0 "><b>Status:</b> Order not ready</p>
+				<p ng-if="reservation.status == 1 "><b>Status:</b> Ready for pickup</p>
+			</div>
+			<div class="col-sm-4">
+				<p><b>Total:</b> $120</p>
+			</div>
+			<div class="col-sm-4">
+				<p><button type="button" class="btn btn-danger" ng-click="cancelOrder(reservation.id)">Cancel Order</button></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
